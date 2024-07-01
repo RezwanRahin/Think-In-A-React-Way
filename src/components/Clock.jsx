@@ -1,5 +1,5 @@
-import React from 'react'
-import Button from './Button'
+import React from 'react';
+import Button from './Button';
 
 class Clock extends React.Component {
     // constructor(props) {
@@ -45,7 +45,13 @@ class Clock extends React.Component {
                 {/* <button type='button' onClick={() => this.handleClick('en-US')}>Click here</button> */}
 
                 {/* <Button change={this.handleClick} locale='en-US'></Button> */}
-                <Button change={this.handleClick} locale='en-US' />
+                {/* <Button change={this.handleClick} locale='en-US' /> */}
+
+                {locale === 'bn-BD' ? (
+                    <Button change={this.handleClick} locale='en-US' show={false} enable={false} />
+                ) : (
+                    <Button change={this.handleClick} locale='bn-BD' show enable />
+                )}
             </div>
         );
     }
