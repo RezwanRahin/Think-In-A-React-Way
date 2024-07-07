@@ -1,8 +1,7 @@
-import Calculator from "./components/Calculator";
-
+import Text from "./components/inheritance/Text";
 
 function App() {
-  return <Calculator />
+  return <Text />;
 }
 
 export default App;
