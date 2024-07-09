@@ -1,10 +1,10 @@
 import Content from "./Content";
 
-function Section({ theme }) {
+function Section() {
     return (
         <div>
             <h1>This is a section</h1>
-            <Content theme={theme} />
+            <Content />
         </div>
     );
 }
