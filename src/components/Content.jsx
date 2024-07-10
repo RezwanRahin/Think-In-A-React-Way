@@ -9,8 +9,8 @@ function Content() {
             <Counter>
                 {(counter, incrementCount) => (
                     <ThemeContext.Consumer>
-                        {({ theme }) => (
-                            <HoverCounter count={counter} incrementCount={incrementCount} theme={theme} />
+                        {({ theme, switchTheme }) => (
+                            <HoverCounter count={counter} incrementCount={incrementCount} theme={theme} switchTheme={switchTheme} />
                         )}
                     </ThemeContext.Consumer>
                 )}
