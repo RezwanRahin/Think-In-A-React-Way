@@ -5,7 +5,7 @@ import Section from "./components/Section";
 import ThemeContext from "./contexts/themeContext";
 
 class App extends React.Component {
-  state = { theme: 'dark' };
+  state = { theme: 'light' };
 
   render() {
     const { theme } = this.state;
