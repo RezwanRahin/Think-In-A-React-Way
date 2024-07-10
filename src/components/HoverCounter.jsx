@@ -1,6 +1,8 @@
 function HoverCounter({ count, incrementCount, theme, switchTheme }) {
     const style = theme === 'dark' ? { backgroundColor: '#000000', color: '#FFA500' } : null;
 
+    console.log('HoverCounter Rendered');
+
     return (
         <div>
             <h1 onMouseOver={incrementCount} style={style}>Hovered {count} times</h1>

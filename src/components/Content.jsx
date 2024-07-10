@@ -7,6 +7,7 @@ function Content() {
     const context = useContext(ThemeContext);
     const { theme, switchTheme } = context;
 
+    console.log('Context Rendered');
 
     return (
         <div>
