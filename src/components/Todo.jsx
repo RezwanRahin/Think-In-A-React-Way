@@ -1,25 +1,24 @@
 import { useState } from "react";
 
 function Todo() {
-    const [todo, setTodo] = useState('');
-    const [warning, setWarning] = useState(null);
+    const [todo, setTodo] = useState({
+        title: '',
+        description: ''
+    });
 
-    const handleInput = (e) => {
-        const inputValue = e.target.value;
-        const updatedWarning = inputValue.includes('.js') ? 'You need JavaScript skill to complete the task. Do you have it?' : null;
-
-        setTodo(inputValue);
-        setWarning(updatedWarning);
-    }
+    const { title, description } = todo;
 
     return (
         <div>
-            <p>{todo}</p>
+            <p>{title}</p>
+
             <p>
-                <textarea name="todo" value={todo} onChange={handleInput} />
+                <input type="text" value={title} onChange={(e) => setTodo({ ...todo, title: e.target.value })} />
             </p>
-            <hr />
-            <h2>{warning || 'Good Choice!'}</h2>
+
+            <p>
+                <textarea name="todo" value={description} onChange={(e) => setTodo({ ...todo, description: e.target.value })} />
+            </p>
         </div>
     );
 }
