@@ -11,10 +11,17 @@ function MyComponent() {
 
     useEffect(() => {
         console.log('starting timer');
-        setInterval(tick, 2000);
+        const interval = setInterval(tick, 2000);
+
+        // do the cleanup - stop the timer
+        return () => {
+            console.log('component unmounted');
+            clearInterval(interval);
+        };
     }, []);
 
     const tick = () => {
+        console.log('clock ticking');
         setDate(new Date());
     };
 
