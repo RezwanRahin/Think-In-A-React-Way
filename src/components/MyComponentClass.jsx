@@ -9,12 +9,16 @@ class MyComponent extends React.Component {
     componentDidMount() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`;
-        setInterval(this.tick, 1000);
+        this.interval = setInterval(this.tick, 1000);
     }
 
     componentDidUpdate() {
         const { count } = this.state;
         document.title = `Clicked ${count} times`;
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     addClick = () => {
@@ -24,6 +28,7 @@ class MyComponent extends React.Component {
     };
 
     tick = () => {
+        console.log('clock ticking');
         this.setState({
             date: new Date()
         });
