@@ -1,9 +1,9 @@
-import Time from "./components/Time";
+import Counter from "./components/Counter23";
 
 function App() {
 	return (
 		<div className="app">
-			<Time />
+			<Counter />
 		</div>
 	);
 }
