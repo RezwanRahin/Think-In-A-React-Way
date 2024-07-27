@@ -1,9 +1,9 @@
-import ComplexCounter from "./components/ComplexCounter23";
+import CounterThree from "./components/CounterThree23";
 
 function App() {
 	return (
 		<div className="app">
-			<ComplexCounter />
+			<CounterThree />
 		</div>
 	);
 }
