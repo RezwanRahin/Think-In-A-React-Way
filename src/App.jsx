@@ -1,9 +1,9 @@
-import GetPost from "./components/GetPost";
+import GetPost2 from "./components/GetPost2";
 
 function App() {
 	return (
 		<div className="app">
-			<GetPost />
+			<GetPost2 />
 		</div>
 	);
 }
