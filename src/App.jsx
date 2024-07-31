@@ -1,3 +1,4 @@
+import './assets/css/global.css'
 import Logo from "./components/Logo";
 
 function App() {
