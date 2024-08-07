@@ -1,8 +1,14 @@
-import './assets/css/dark.css'
+// import './assets/css/dark.css'
+import GlobalStyle from './components/styles/Global.styles';
 import Tutorial from './components/Tutorial';
 
 function App() {
-	return <Tutorial />
+	return (
+		<>
+			<GlobalStyle />
+			<Tutorial />
+		</>
+	);
 }
 
 export default App
