@@ -1,13 +1,8 @@
-import './assets/css/global.css'
-import Logo from "./components/Logo";
+import './assets/css/dark.css'
+import Tutorial from './components/Tutorial';
 
 function App() {
-	return (
-		<div className="App">
-			<h1>Learn with Sumit</h1>
-			<Logo />
-		</div>
-	);
+	return <Tutorial />
 }
 
 export default App
